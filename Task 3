@@ -1,0 +1,11 @@
+def max_of_three(var):
+    result = max(var)
+    return result
+
+list =[]
+for i in range(0, 3):
+    list.append(float(input('Введите любое число: ')))
+print(list)
+print(max_of_three(list))
+
+

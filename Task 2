@@ -1,0 +1,81 @@
+def in_fio(var1, var2, var3):
+    var = family + ' ' + name + ' ' + last_name
+    return var
+
+def in_base(var):
+    var = var
+    return var                                  # не придумал зачем сюда передовать сформированный список
+
+
+
+
+
+
+numb_client = 2 # количество вводимых клиентов
+
+clients = list()
+clients_name = list()
+clients_gender = list()
+clients_town = list()
+clients_year = list()
+clients_email = list()
+clients_phone = list()
+
+
+
+#clients_name.append('ФИО клиентов:  ')
+#clients_gender.append('Пол клиентов:  ')
+#clients_town.append('Города клиентов: ')
+#clients_year.append('Возраст клиентов:  ')
+#clients_email.append('Email клиентов: ')
+#clients_phone.append('Контакты клиентов:  ')
+
+
+i = 0
+while i < numb_client:
+    family = input('Введите свою Фамилию:   ')
+    family = family.capitalize()
+    name = input('Введите свое имя: ')
+    name = name.capitalize()
+    last_name = input('Введите свое отчество: ')
+    last_name = last_name.capitalize()
+    fio = in_fio(family, name, last_name)
+    #print(fio)
+    key0 = 'ФИО'
+
+    gender = input('Введите свой пол "м" или "ж":   ')
+    #print(gender)
+    key1 = 'пол'
+
+    town = input('Введите город проживания:   ')
+    town = town.capitalize()
+    #print(town)
+    key2 = 'город'
+
+    born_year = int(input('Введите год рождения:    '))
+    #print(born_year)
+    key3 = 'год_рождения'
+
+    email = input('Введите свой e-mail: ')
+    #print(email)
+    key4 = 'e_mail'
+
+    phone = input('Введите свой номер телефона:        ')
+    #print(phone)
+    key5 = 'телефон'
+
+
+    client = (fio, gender, town, born_year, email, phone)
+    clients.append(client)
+
+    clients_name.append(fio)
+    clients_gender.append(gender)
+    clients_town.append(town)
+    clients_year.append(born_year)
+    clients_email.append(email)
+    clients_phone.append(phone)
+
+
+    i = i + 1
+print(in_base(clients))
+
